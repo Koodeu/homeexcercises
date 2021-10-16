@@ -1,4 +1,4 @@
-package kl;
+package kl.zadania1i2;
 
 import java.util.*;
 import java.util.stream.Collectors;
