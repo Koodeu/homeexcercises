@@ -80,4 +80,28 @@ public class CarService {
         return false;
     }
 
+    public List<Car> findCarsOfGivenManufacturer(List<Car> carsList, Manufacturer manufacturer) {
+        List<Car> listOfCarsOfGivenManufacturer = new ArrayList<>();
+
+        for (Car car : carsList) {
+            if (car.getManufacturerList().contains(manufacturer)) {
+                listOfCarsOfGivenManufacturer.add(car);
+            }
+        }
+        return listOfCarsOfGivenManufacturer;
+    }
+
+    public List<Car> findCarsOfGivenManufacturerAndProductionYear(List<Car> carsList, Manufacturer manufacturer, int yearOfProduction) {
+
+        for (Car car : carsList) {
+            List<Car> listOfCarsOfGivenManufacturerAndProductionYear = new ArrayList<>();
+            if (car.getManufacturerList().contains(manufacturer) && car.getYearOfProduction() == yearOfProduction) {
+                listOfCarsOfGivenManufacturerAndProductionYear.add(car);
+                return listOfCarsOfGivenManufacturerAndProductionYear;
+            }
+        }
+        return null;
+    }
+
+
 }

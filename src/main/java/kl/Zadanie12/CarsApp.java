@@ -49,6 +49,7 @@ public class CarsApp {
                 System.out.println(carService.sortList(carsList, "descending"));
 
         System.out.println(carService.isGivenCarModelOnTheList(carsList, "Astra"));
-
+        System.out.println(carService.findCarsOfGivenManufacturer(carsList, manufacturer5));
+        System.out.println("test" + carService.findCarsOfGivenManufacturerAndProductionYear(carsList, manufacturer2, 2000));
     }
 }

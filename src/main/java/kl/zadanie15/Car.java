@@ -6,33 +6,38 @@ import java.util.List;
 
 public enum Car {
 
-    FERRARI(1200, 180),
-    PORSCHE(1500, 120),
-    MERCEDES(3000, 90),
-    BMW(8000, 192),
-    OPEL(9000, 121),
-    FIAT(6700, 188),
-    TOYOTA(7100, 120);
+    FERRARI(42000, 450, 310 ),
+    PORSCHE(180000, 389, 280),
+    LAMBORGHINI(600000, 650, 389),
+    OPEL(89000, 140, 210),
+    FIAT(65999, 120, 190);
 
+    private double cena;
+    private double power;
+    private double maxSpeed;
 
-    private final double price;
-    private final double power;
-
-    public static List<Car> premiumCars = Arrays.asList(FERRARI, PORSCHE, MERCEDES);
-
-
-    Car(double price, double power) {
-        this.price = price;
+    Car(double cena, double power, int maxSpeed) {
+        this.cena = cena;
         this.power = power;
+        this.maxSpeed = maxSpeed;
     }
 
-    boolean isPremium() {
-     return premiumCars.contains(this);
-    }
+    private static List<Car> premiumCarsList = Arrays.asList(FERRARI, PORSCHE, LAMBORGHINI);
 
-    boolean isRegular() {
-      return   !premiumCars.contains(this);
-    }
-
+    public boolean isPremium() {
+        return premiumCarsList.contains(this);
 
     }
+
+    public boolean isRegular() {
+        return !premiumCarsList.contains(this);
+    }
+
+    public boolean isFasterThan(Car car) {
+        if (this.maxSpeed > car.maxSpeed){
+            return true;
+        }
+        return false;
+    }
+
+}

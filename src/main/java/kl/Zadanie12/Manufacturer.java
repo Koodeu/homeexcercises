@@ -37,4 +37,17 @@ public class Manufacturer {
     public int hashCode() {
         return Objects.hash(name, yearOfFoundation, countryOfOrigin);
     }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public int getYearOfFoundation() {
+        return yearOfFoundation;
+    }
+
+    public String getCountryOfOrigin() {
+        return countryOfOrigin;
+    }
 }

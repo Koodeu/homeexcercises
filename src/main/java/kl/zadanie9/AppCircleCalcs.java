@@ -19,15 +19,10 @@ public class AppCircleCalcs {
 
         MoveDirection moveDirection1 = new MoveDirection(15,21);
         centre.move(moveDirection1);
-        System.out.println("Wpółrzędne punktu po przesunięciu: X: " + centre.getX() + "Y: " +centre.getY());
+        System.out.println("Wpółrzędne punktu po przesunięciu: X: "+ centre.getX() + ", Y: " +centre.getY());
 
-        circle.move(moveDirection1);
-        System.out.println("Nowe współrzędne środka okręgu to X: " + centre.getX() + " Y: "+ centre.getY() +
-                "punktu na okręgu to X: " + point.getY() + " Y: " + point.getY() );
+        System.out.println(circle.center.getX() + " " + circle.center.getY());
 
-
-            circle.resize(3);
-        System.out.println(circle.getPoint());
     }
 
 }
