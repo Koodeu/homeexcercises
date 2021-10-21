@@ -4,4 +4,6 @@ public enum Ingredient {
 
     VODKA, ANANAS, SPRITE, COLA,
 
+
+
 }
